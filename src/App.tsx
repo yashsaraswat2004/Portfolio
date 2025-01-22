@@ -11,21 +11,21 @@ function App() {
     {
       title: "Travel Tour",
       description: "A platform for travelers to find tour plans, book tours directly",
-      image: "/public/TravelTour.png",
+      image: "https://portfolio-mjhz.onrender.com/TravelTour.png",
       tags: ["MERN Stack", "Tailwind CSS", "JWT"],
       link: "https://traveltour-i4r3.onrender.com/",
     },
     {
       title: "SoloConnect",
       description: "A web app for solo Travellers to make social connections by planning trips together and engaging with communities.",
-      image: "/public/SoloConnect.png",
+      image: "https://portfolio-mjhz.onrender.com/SoloConnect.png",
       tags: ["React", "Firebase", "TailwindCSS"],
       link: "https://github.com/yashsaraswat2004/SoloConnect",
     },
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with real-time inventory management and Razorpay payment integration.",
-      image: "/public/Ecom.png",
+      image: "https://portfolio-mjhz.onrender.com/Ecom.png",
       tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       link: "https://github.com/yashsaraswat2004/Ecommerce-Project--ECOM",
     },
@@ -242,7 +242,7 @@ function App() {
                 className="relative z-10"
               >
                 <img
-                  src="/public/Coder.png"
+                  src="https://portfolio-mjhz.onrender.com/Coder.png"
                   alt="Developer Illustration"
                   className="rounded-lg shadow-2xl w-[500px]"
                 />
