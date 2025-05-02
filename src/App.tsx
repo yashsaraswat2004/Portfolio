@@ -218,7 +218,7 @@ function App() {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-indigo-600 text-indigo-600 px-8 py-2 rounded-md hover:bg-indigo-50 transition-colors flex justify-center items-center"
                 >
-                <a href="/Yash_Resume.pdf">Download CV <Download className="ml-2" size={20} /></a>
+                <a href="/Yash_CV.pdf">Download CV <Download className="ml-2" size={20} /></a>
                 </motion.button>
               </motion.div>
             </motion.div>
