@@ -489,8 +489,8 @@ function App() {
             >
               <div className="flex-shrink-0">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/4/4b/GLA_University_logo.png"
-                  alt="GLA University"
+                  src="rjitlogo.jpeg"
+                  alt="RJIT"
                   className="w-16 h-16 rounded-full object-contain border-2 border-indigo-200"
                 />
               </div>
