@@ -179,27 +179,46 @@ function App() {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="text-5xl font-bold text-gray-900 mb-6"
+                className="text-5xl font-bold text-gray-900 mb-4"
               >
-                Yash Saraswat
+                Hi, I'm <span className="text-indigo-600">Yash Saraswat</span>
                 <motion.span
                   initial={{ x: -100 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.8, type: "spring" }}
                   className="block text-indigo-600 mt-2"
                 >
-                  Full Stack Developer
+                  Full Stack Developer & Problem Solver
                 </motion.span>
               </motion.h1>
+              {/* Achievement Badge */}
+              <div className="mb-4">
+                <span className="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-1 rounded-full font-semibold text-sm shadow-sm animate-pulse">
+                  <Target size={18} className="mr-2" />
+                  Hacksquad'23 Top 5% Contributor
+                </span>
+              </div>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-xl text-gray-600 mb-8"
+                className="text-xl text-gray-600 mb-6"
               >
-                I craft beautiful, scalable web applications that solve real-world problems.
-                With 3 years of experience in full-stack development, I can help bring your ideas to life.
+                I build robust web apps, solve complex problems, and contribute to open source. <br />
+                <span className="text-indigo-700 font-semibold">300+ coding problems solved</span> | <span className="text-green-700 font-semibold">Active Open Source Contributor</span>
               </motion.p>
+              {/* Quick Stats Row */}
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="bg-indigo-50 px-4 py-2 rounded-lg text-indigo-700 font-semibold flex items-center">
+                  <Code2 size={18} className="mr-2" /> Full Stack Projects
+                </div>
+                <div className="bg-purple-50 px-4 py-2 rounded-lg text-purple-700 font-semibold flex items-center">
+                  <Target size={18} className="mr-2" /> 300+ DSA Problems
+                </div>
+                <div className="bg-green-50 px-4 py-2 rounded-lg text-green-700 font-semibold flex items-center">
+                  <Github size={18} className="mr-2" /> Open Source
+                </div>
+              </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -321,6 +340,82 @@ function App() {
         </div>
       </section>
 
+      {/* Freelancing & Services Section */}
+      <section id="freelance" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Freelancing & Services</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              I help startups, businesses, and individuals bring their ideas to life with modern web solutions. Here’s what I can do for you:
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-indigo-50 rounded-xl p-8 shadow-md text-center"
+            >
+              <Code2 size={36} className="mx-auto text-indigo-600 mb-4" />
+              <h3 className="font-semibold text-lg mb-2">Custom Web Development</h3>
+              <p className="text-gray-600">Full-stack web apps, landing pages, and business websites tailored to your needs.</p>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-indigo-50 rounded-xl p-8 shadow-md text-center"
+            >
+              <Rocket size={36} className="mx-auto text-indigo-600 mb-4" />
+              <h3 className="font-semibold text-lg mb-2">Performance Optimization</h3>
+              <p className="text-gray-600">Speed up your site, improve SEO, and deliver a better user experience.</p>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-indigo-50 rounded-xl p-8 shadow-md text-center"
+            >
+              <Users size={36} className="mx-auto text-indigo-600 mb-4" />
+              <h3 className="font-semibold text-lg mb-2">Consulting & Mentorship</h3>
+              <p className="text-gray-600">Get expert advice on architecture, tech stack, or career guidance in web development.</p>
+            </motion.div>
+            {/* New: Problem Solving & DSA */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-purple-50 rounded-xl p-8 shadow-md text-center md:col-span-1"
+            >
+              <Target size={36} className="mx-auto text-purple-600 mb-4" />
+              <h3 className="font-semibold text-lg mb-2">Problem Solving & DSA</h3>
+              <p className="text-gray-600">
+                Strong foundation in Data Structures & Algorithms. <br />
+                <span className="font-semibold text-purple-700">Hacksquad'23 Top 5% Contributor</span>.<br />
+                300+ coding problems solved across LeetCode, Codeforces, and more.
+              </p>
+            </motion.div>
+            {/* New: Open Source */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="bg-green-50 rounded-xl p-8 shadow-md text-center md:col-span-1"
+            >
+              <Github size={36} className="mx-auto text-green-600 mb-4" />
+              <h3 className="font-semibold text-lg mb-2">Open Source Contributions</h3>
+              <p className="text-gray-600">
+                Active contributor to open source.<br />
+                Collaborated on global projects, mentored newcomers, and built impactful solutions for the community.
+              </p>
+            </motion.div>
+          </div>
+          <div className="text-center mt-10">
+            <a
+              href="#contact"
+              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-md hover:bg-indigo-700 transition-colors font-semibold"
+            >
+              Let's Work Together
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -367,6 +462,56 @@ function App() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              My academic journey has helped me build a strong foundation in computer science and problem solving.
+            </p>
+          </motion.div>
+          <div className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-indigo-50 rounded-xl p-6 shadow-md flex flex-col md:flex-row items-center md:items-start gap-6"
+            >
+              <div className="flex-shrink-0">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/4/4b/GLA_University_logo.png"
+                  alt="GLA University"
+                  className="w-16 h-16 rounded-full object-contain border-2 border-indigo-200"
+                />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-indigo-700">Rustamji Institute of Technology, Tekanpur, Gwalior</h3>
+                <p className="text-gray-700">B.Tech in Computer Science & Engineering</p>
+                <p className="text-gray-500 text-sm">2022 – 2026 (Expected)</p>
+                <p className="text-gray-600 mt-2">
+                  Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems, Operating Systems.
+                </p>
+                <div className="flex flex-wrap gap-4 mt-2">
+                  <span className="bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    CGPA: 7.89
+                  </span>
+                  <span className="bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">
+                    SGPA (Last Semester): 8.63
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+            {/* Add more education blocks if needed */}
           </div>
         </div>
       </section>
